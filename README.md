@@ -1,3 +1,5 @@
+
+
 ## About the course & author
 
 Please see the [coursera](https://www.coursera.org/learn/machine-learning/home/info/README.md)
@@ -28,4 +30,26 @@ Taught by [Andrew Ng](https://www.coursera.org/instructor/andrewng/README.md)
         解决：去掉部分特征，或者对变量进行正则化
 
 
+## EX2
+分类算法、Logistics回归分析、正则化应用
 
+### 分类算法
+
+将目标输出值离散化，并与对应的结果相映射。需要引用sigmoid函数来让预测的函数能够连续（方便后续观察、计算），具体形式 y=1/（1+e^(theta'*X)
+
+预测函数依旧为连续函数，输出值可以看作样本为正例的概率大小
+
+### Logistics回归
+
+预测函数涉及到对数概率的操作，因此需要用Logistics回归来进行分析
+
+原理：最大似然估计（MLE），略（后续会涉及到。。。）
+回归方法：依旧是 梯度下降 和 Normal Equation（与线性回归最大的区别就是预测函数的形式有所变化，更新函数和代价函数也发生相应的变化）
+
+### 正则化
+
+如之前所说，引入过多的特征变量，会导致过耦合，正则化则是要减弱耦合的情况
+
+正则化代价函数 = 原代价函数 + 正则参数*(theta.*theta)/（2*m）；
+
+正则化代价函数最小化时兼顾了预测准确性和参数值的大小，后续参数值越小耦合程度会越低
