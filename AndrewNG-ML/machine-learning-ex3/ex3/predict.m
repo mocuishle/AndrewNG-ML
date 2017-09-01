@@ -23,8 +23,8 @@ p = zeros(size(X, 1), 1);
 
 a1 = [ones(m,1) X];
 z2 = Theta1*(a1');
-a2 = [ones(1,m); sigmoid(z2)];
 % ci chu you keng ,zhu yi xiang liang bianhua
+a2 = [ones(1,m); sigmoid(z2)];
 z3 = Theta2*a2;
 [a,b] = max(z3',[],2);
 p = b;
